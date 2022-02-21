@@ -11,11 +11,11 @@ import re
 class WppBot:
     dir_path = os.getcwd()
     path=r'C:\Users\Transanches\Desktop\Robozap\geckodriver.exe'
-    profile = os.path.join(dir_path, "profile", "wpp")
-
     nome_bot="tiago"
     def __init__(self):
        #contruct
+       dir_path = os.getcwd()
+       self.profile = os.path.join(dir_path, "profile", "wpp")
        self.nome_bot=self.nome_bot
        self.firefox =r'C:\ProgramData\Mozilla-1de4eec8-1241-4177-a864-e594e8d1fb38\updates\308046B0AF4A39CB'
        self.mozila = self.dir_path  +self.path
@@ -23,12 +23,12 @@ class WppBot:
     def conect(self):
         #Conect
         self.driver = webdriver.Firefox(service=Service(self.path))
-        self.options.add_argument(r"user-data-dir=" + self.mozila + "\profile\wpp")
+        self.options.add_argument(r"user-data-dir=" + self.profile)
         self.driver.get("https://web.whatsapp.com/")
         self.driver.implicitly_wait(10)
     def FindContact(self,contact):
         #find contact and send mensage
-        self.phaser=""
+        self.phaser="oi tiago"
         self.FindBox=self.driver.find_element_by_class_name('_13NKt')
         time.sleep(20)
         self.FindBox.send_keys(contact)
@@ -85,9 +85,10 @@ class WppBot:
         i=1
         hour = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[3]/div/div[2]/div[1]/div/div/div['+ str(i)+']/div/div/div/div[2]/div[1]/div[2]')
         hour.click()
-        ReceiverMsg=self.driver.find_element_by_xpath()
-        ReceiverMsg=str(ReceiverMsg)
-        ReceiverMsg2=self.driver.find_element_by_xpath()
+        post=self.driver.find_elements_by_class_name('_22Msk')
+        ultimo=len(post)-1
+        ReceiverMsg=str(post[ultimo].find_element_by_css('span.selectable-text').text)
+        ReceiverMsg2=str(post[ultimo].find_element_by_css('span.selectable-text').text)
         button_clip = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div')
         if ReceiverMsg==str(1) and charge==0:
              "get msg "
@@ -96,8 +97,6 @@ class WppBot:
              time.sleep(10)
              if ReceiverMsg2!=str(1):
                  DataDriver=str(ReceiverMsg2)
-
-
         elif ReceiverMsg==str(1) and charge>0:
              self.message.send_keys(data)
              self.SendMensage.click()
@@ -112,7 +111,7 @@ class WppBot:
                      self.message.send_keys(database.get(ReceiverMsg))
                      self.SendMensage.click()
         elif  ReceiverMsg==str(2):
-              self.message.send_keys(options)
+              self.message.send_keys(option)
               self.SendMensage.click()
         elif ReceiverMsg==str(3):
              self.message.send_keys()
@@ -127,10 +126,7 @@ class WppBot:
              FindContat.send_keys("Comprovantes")
              Checklist=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/span[2]/div[1]/span/div[1]/div/div/div/div/div/div[2]/div/div/div/div[1]/div/div[2]/div')
              Checklist.click()
-
-
-
-
+        i=+1
 
 
 
