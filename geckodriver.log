@@ -32,3 +32,144 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 
 ###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
 
+1645714745625	geckodriver	INFO	Listening on 127.0.0.1:53472
+1645714748713	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53473" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofileZYoGXu"
+1645714749647	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofileZYoGXu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53473/devtools/browser/0adfcfa4-22b1-4ddb-bc57-b4e44142fff2
+1645714757554	Marionette	INFO	Listening on port 53478
+1645714757943	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645714800769	Marionette	INFO	Stopped listening on port 53478
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 6676, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1645714880494	geckodriver	INFO	Listening on 127.0.0.1:56078
+1645714883803	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56079" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofileZLYHtM"
+1645714886305	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofileZLYHtM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56079/devtools/browser/2a6cda6c-5f4f-498e-a8c8-1a50a40f79ba
+1645714892166	Marionette	INFO	Listening on port 56085
+1645714892601	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1645721509843	Marionette	INFO	Stopped listening on port 56085
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 844, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1645786726723	geckodriver	INFO	Listening on 127.0.0.1:64998
+1645786729857	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64999" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofile9demSI"
+1645786732919	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofile9demSI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64999/devtools/browser/0b2a59b4-bbcb-4a4d-92e5-2467909684fd
+1645786741665	Marionette	INFO	Listening on port 65004
+1645786742099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645786823667	geckodriver	INFO	Listening on 127.0.0.1:65059
+1645786826762	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65060" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofilePNh6Zm"
+1645786827110	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofilePNh6Zm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65060/devtools/browser/335207cb-1a7a-4681-a1f6-24a46f05760e
+1645786830506	Marionette	INFO	Listening on port 65066
+1645786831162	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1645786885628	geckodriver	INFO	Listening on 127.0.0.1:65132
+1645786888726	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65133" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofiletxIhch"
+1645786889121	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofiletxIhch\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65133/devtools/browser/82d778ea-b6f9-4bf9-9ecb-7542b32894e2
+1645786894955	Marionette	INFO	Listening on port 65138
+1645786895822	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+
+###!!! [Parent][PBackgroundParent] Error: Send(msgname=PMessagePort::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PMessagePort::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PMessagePort::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+1645787072523	geckodriver	INFO	Listening on 127.0.0.1:65207
+1645787075612	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65208" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofilecnM3GW"
+1645787075925	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofilecnM3GW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65208/devtools/browser/761dbec9-988a-47aa-a215-0bb8159befe6
+1645787083349	Marionette	INFO	Listening on port 65213
+1645787084229	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645787397368	geckodriver	INFO	Listening on 127.0.0.1:65297
+1645787400455	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65298" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofileAtFKuy"
+1645787400883	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofileAtFKuy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65298/devtools/browser/a9594aaa-a50c-46fe-83b1-70a7b3a5d5c4
+1645787407868	Marionette	INFO	Listening on port 65303
+1645787408607	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PMessagePort::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PMessagePort::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PMessagePort::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PMessagePort::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+1645787733410	geckodriver	INFO	Listening on 127.0.0.1:65355
+1645787736496	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65356" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofilegIpL7D"
+1645787737049	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofilegIpL7D\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65356/devtools/browser/75b02981-54f8-444e-8e11-88a7093deb54
+1645787744152	Marionette	INFO	Listening on port 65361
+1645787744644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645795846014	geckodriver	INFO	Listening on 127.0.0.1:49765
+1645795849101	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49766" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofileaSoyVI"
+1645795849608	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofileaSoyVI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49766/devtools/browser/f8574f3b-c108-44ec-a619-b9956941eb59
+1645795853827	Marionette	INFO	Listening on port 49771
+1645795854066	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1645796413107	geckodriver	INFO	Listening on 127.0.0.1:49893
+1645796416198	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49894" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofilePSAS3A"
+1645796416507	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofilePSAS3A\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49894/devtools/browser/9fa41504-f1ba-4da0-8db4-9102c87b1d0d
+1645796421779	Marionette	INFO	Listening on port 49899
+1645796422203	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645796494987	geckodriver	INFO	Listening on 127.0.0.1:49943
+1645796498055	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49944" "-no-remote" "-profile" "C:\\Users\\TRANSA~1\\AppData\\Local\\Temp\\rust_mozprofileroZk8P"
+1645796498392	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Transanches\\AppData\\Local\\Temp\\rust_mozprofileroZk8P\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49944/devtools/browser/7b74571d-e626-4fdc-b9fc-4c5d63d2786a
+1645796504486	Marionette	INFO	Listening on port 49949
+1645796504512	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645796537145	Marionette	INFO	Stopped listening on port 49949
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 17804, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+

@@ -1,12 +1,15 @@
+import webbrowser
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox import service
 import os
 import time
 import re
+
 
 class WppBot:
     dir_path = os.getcwd()
@@ -22,23 +25,23 @@ class WppBot:
        self.options = webdriver.FirefoxOptions()
     def conect(self):
         #Conect
-        self.driver = webdriver.Firefox(service=Service(self.path))
+        self.driver = webdriver.Firefox()
         self.options.add_argument(r"user-data-dir=" + self.profile)
         self.driver.get("https://web.whatsapp.com/")
         self.driver.implicitly_wait(10)
     def FindContact(self,contact):
         #find contact and send mensage
         self.phaser="oi tiago"
-        self.FindBox=self.driver.find_element_by_class_name('_13NKt')
+        self.FindBox=self.driver.findElement(By.CLASS_NAME('_13NKt'))
         time.sleep(20)
         self.FindBox.send_keys(contact)
         time.sleep(5)
-        self.ClickBox=self.driver.find_element_by_class_name('_3vPI2')
+        self.ClickBox=self.driver.findElement(By.CLASS_NAME('_3vPI2'))
         self.ClickBox.click()
         time.sleep(1)
-        self.message=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+        self.message=self.driver.findElement(By.XPATH('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]'))
         self.message.send_keys(self.phaser)
-        self.SendMensage=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button')
+        self.SendMensage=self.driver.findElement(By.XPATH('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button'))
         self.SendMensage.click()
     def greeting(self):
         "first messagem"
@@ -60,15 +63,16 @@ class WppBot:
               else:
                   self.gretting = "Olá" + "," + best_wishes[2]
 
-             # print(self.gretting + " " + phaser_start + "" + option)
-              self.message = self.driver.find_element_by_xpath(
-                  '/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
-              self.message.send_keys(self.self.gretting + " " + phaser_start + "" + option)
-              self.SendMensage = self.driver.find_element_by_xpath(
-                  '/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button')
-              self.SendMensage.click()
+
+              #self.message = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+              #self.message.send_keys(self.gretting + " " + phaser_start + "" + option)
+              print(self.gretting + " " + phaser_start + "" + option)
+              #self.SendMensage = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button')
+              #self.SendMensage.click()
+              print(i)
               i += 1
             except:break
+
     def Response(self):
         "Response Msg"
         option="3-Adiantamento\n4-Saldo\n"
@@ -85,7 +89,7 @@ class WppBot:
         i=1
         hour = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[3]/div/div[2]/div[1]/div/div/div['+ str(i)+']/div/div/div/div[2]/div[1]/div[2]')
         hour.click()
-        post=self.driver.find_elements_by_class_name('_22Msk')
+        post=self.driver.find_element_by_xpath('_22Msk')
         ultimo=len(post)-1
         ReceiverMsg=str(post[ultimo].find_element_by_css('span.selectable-text').text)
         ReceiverMsg2=str(post[ultimo].find_element_by_css('span.selectable-text').text)
@@ -96,7 +100,7 @@ class WppBot:
              self.SendMensage.click()
              time.sleep(10)
              if ReceiverMsg2!=str(1):
-                 DataDriver=str(ReceiverMsg2)
+                DataDriver=str(ReceiverMsg2)
         elif ReceiverMsg==str(1) and charge>0:
              self.message.send_keys(data)
              self.SendMensage.click()
