@@ -11,6 +11,7 @@ import time
 import re
 
 
+
 class WppBot:
     dir_path = os.getcwd()
     path=r'C:\Users\Transanches\Desktop\Robozap\geckodriver.exe'
@@ -81,7 +82,7 @@ class WppBot:
               "E-mail comprovantes@transanches.com.br\nPoderá entrar em contato com\n"
         QuestionType="Digite Qual o Tipo de Carroceria:\nS-Sider\nB-Bau\nA-Aberto\nG-Graneleiro\n"
         SingleAswer="No momento Não Temos Carga:\nDeixe seu Nome\nTipo de Veiculo\nTipo de Carroceria\n" \
-                    "Telefone neste formato(xx)xxxxx-xxxx"
+                    "Cidade que gostaria de ir\nTelefone neste formato(xx)xxxxx-xxxx use a virgula(,) para separar "
         DataDriver=None
         charge="Get database"
         database={}
