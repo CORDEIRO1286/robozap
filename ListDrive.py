@@ -5,4 +5,3 @@ import sqlite3
 
 #table(motorista)[name,phone(keyPrimary),TypeVehicle,TypeCharge,City]
 #table(City)[r=50km(citys)]
-#table()[
