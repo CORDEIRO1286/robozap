@@ -30,6 +30,23 @@ class WppBot:
         self.options.add_argument(r"user-data-dir=" + self.profile)
         self.driver.get("https://web.whatsapp.com/")
         self.driver.implicitly_wait(10)
+    def ChargeCarga(self):
+        self.qtd=int(input("Quantidade de carga para contratação de caminhoneiro digite [0]-Para nenhuma : "))
+        self.DataBase=[]
+        carga=[]
+        if self.qtd>0:
+            for i in range(qtd):
+               carga.append(input("Cidade de Origem/UF:"))
+               carga.append(input("Cidade de Destino/UF:"))
+               carga.append(input("Peso:"))
+               carga.append(input("Volume(s) Digite[0]-Caso Não seja nescessario :"))
+               carga.append(input("Tipo de Caminhão:\n"
+                               "[T]-Para Truck,[BT]-Para Bitruck,[C]-Para Carreta,[TC]-Para Carreta Trucada"
+                                  ",[U]-Para utilitário caso seja mais que um tipo separar por [,] virgula"))
+               carga.append(input("Tipo de Carroceria:\n"
+                               "[S]-Para Sider,[A]-Aberto,[B]-Para Bau"))
+
+
     def FindContact(self,contact):
         #find contact and send mensage
         self.phaser="oi tiago"
@@ -83,10 +100,9 @@ class WppBot:
         QuestionType="Digite Qual o Tipo de Carroceria:\nS-Sider\nB-Bau\nA-Aberto\nG-Graneleiro\n"
         SingleAswer="No momento Não Temos Carga:\nDeixe seu Nome\nTipo de Veiculo\nTipo de Carroceria\n" \
                     "Cidade que gostaria de ir\nTelefone neste formato(xx)xxxxx-xxxx use a virgula(,) para separar "
-        DataDriver=None
-        charge="Get database"
-        DataBase={}
-        ChageBase=str(DataBase)
+        DataDriver=[]
+        DataBase=[] # get Database
+        charge=self.qtd
         BodyType="Para este tipo de caminhão não temos carga"
         i=1
         hour = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[3]/div/div[2]/div[1]/div/div/div['+ str(i)+']/div/div/div/div[2]/div[1]/div[2]')
@@ -102,7 +118,7 @@ class WppBot:
              self.SendMensage.click()
              time.sleep(10)
              if ReceiverMsg2!=str(1):
-                DataDriver=str(ReceiverMsg2)
+                DataDriver.append(str(ReceiverMsg2))
         elif ReceiverMsg==str(1) and charge>0:
              self.message.send_keys(data)
              self.SendMensage.click()
