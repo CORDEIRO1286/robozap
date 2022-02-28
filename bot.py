@@ -85,8 +85,9 @@ class WppBot:
                     "Cidade que gostaria de ir\nTelefone neste formato(xx)xxxxx-xxxx use a virgula(,) para separar "
         DataDriver=None
         charge="Get database"
-        database={}
-        BodyType="Para este tipo de caminhão não temos carga\nTemos as seguntes cargas\n",str(database).strip()
+        DataBase={}
+        ChageBase=str(DataBase)
+        BodyType="Para este tipo de caminhão não temos carga"
         i=1
         hour = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[3]/div/div[2]/div[1]/div/div/div['+ str(i)+']/div/div/div/div[2]/div[1]/div[2]')
         hour.click()
