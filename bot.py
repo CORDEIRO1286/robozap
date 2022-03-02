@@ -32,20 +32,39 @@ class WppBot:
         self.driver.implicitly_wait(10)
     def ChargeCarga(self):
         self.qtd=int(input("Quantidade de carga para contratação de caminhoneiro digite [0]-Para nenhuma : "))
-        self.DataBase=[]
-        carga=[]
-        if self.qtd>0:
-            for i in range(qtd):
-               carga.append(input("Cidade de Origem/UF:"))
-               carga.append(input("Cidade de Destino/UF:"))
-               carga.append(input("Peso:"))
-               carga.append(input("Volume(s) Digite[0]-Caso Não seja nescessario :"))
-               carga.append(input("Tipo de Caminhão:\n"
-                               "[T]-Para Truck,[BT]-Para Bitruck,[C]-Para Carreta,[TC]-Para Carreta Trucada"
-                                  ",[U]-Para utilitário caso seja mais que um tipo separar por [,] virgula"))
-               carga.append(input("Tipo de Carroceria:\n"
-                               "[S]-Para Sider,[A]-Aberto,[B]-Para Bau"))
+        self.DataBase={}
+        charge=[]
+        TypeTruck=None
+        star=None
+        end=None
 
+        if self.qtd>0:
+
+            for i in range(self.qtd):
+                TypeTruck=str.upper(input("Tipo de caminhão:\n[T]-Truck\n[BT]-Bitruck\n[C]-Carreta\n"
+                                                 "[CT]-CARRETA TRUCADA\n"
+                                                  "[O]-outros\n\n"))
+                BodyWork=str.upper(input("Tipo de Carroceria:\n"
+                                         "[S]-Sider\n"
+                                         "[A]-Aberta\n"
+                                         "[B]-Báu\n"
+                                         "[G]-Graneleiro"
+                                         "[T]-Para Qualquer tipo de Carroceria:\n\n "))
+
+                city=str.upper(input(("Cidade de Embarque:\n")))
+                uf=str.upper(input("Estado de Embarque [UF]:\n"))
+                star=city+"/"+uf
+                city = str.upper(input("Cidade de Desembarque:\n"))
+                uf = str.upper(input("Estado de  Dsembarque [UF]:\n\n"))
+                end=city+"/"+uf
+                weight=float(int(input("Qual o peso:\n\n")))
+                size=int(input("Qual o Volume Caso não precisar colocar 0 "))
+                if TypeTruck=="T" or TypeTruck=="BT":
+                    size_Truck=8.5
+
+                self.DataBase[i]={"out":star,"end":end,"TypeTruck":TypeTruck,"BodyWork":BodyWork,"weight":weight,"size_charge"
+                                  :size,"size_min":size_Truck}
+        return self.DataBase
 
     def FindContact(self,contact):
         #find contact and send mensage
@@ -94,12 +113,16 @@ class WppBot:
     def Response(self):
         "Response Msg"
         option="3-Adiantamento\n4-Saldo\n"
-        data="Digite uma da opções:\nT-Truck\nC-Carreta\nO-outros"
+        data="Digite uma da opções:\n[T]-Truck\n" \
+             "[BT]-Bitruck\n[C]-Carreta\n" \
+              "[CT]-CARRETA TRUCADA\n"\
+              "[O]-outros\n\n"
         debit="Para receber o saldo você deve primeiro enviar os comprovantes digitalizado em pdf para o" \
               "E-mail comprovantes@transanches.com.br\nPoderá entrar em contato com\n"
-        QuestionType="Digite Qual o Tipo de Carroceria:\nS-Sider\nB-Bau\nA-Aberto\nG-Graneleiro\n"
+        QuestionType="Digite Qual o Tipo de Carroceria:\n[S]-Sider\n[B]-Bau\n[A]-Aberto\n[G]-Graneleiro\n"
         SingleAswer="No momento Não Temos Carga:\nDeixe seu Nome\nTipo de Veiculo\nTipo de Carroceria\n" \
                     "Cidade que gostaria de ir\nTelefone neste formato(xx)xxxxx-xxxx use a virgula(,) para separar "
+
         DataDriver=[]
         DataBase=[] # get Database
         charge=self.qtd
@@ -119,35 +142,31 @@ class WppBot:
              time.sleep(10)
              if ReceiverMsg2!=str(1):
                 DataDriver.append(str(ReceiverMsg2))
+                i+=1
         elif ReceiverMsg==str(1) and charge>0:
              self.message.send_keys(data)
              self.SendMensage.click()
-        elif ReceiverMsg=="T" or ReceiverMsg=="C" or ReceiverMsg=="O":
-            self.message.send_keys(QuestionType)
-            self.SendMensage.click()
-        elif ReceiverMsg=="S" or ReceiverMsg=="B" or ReceiverMsg=="G":
-                 if ReceiverMsg not in database:
-                     self.message.send_keys(BodyType)
-                     self.SendMensage.click()
-                 else:
-                     self.message.send_keys(database.get(ReceiverMsg))
-                     self.SendMensage.click()
-        elif  ReceiverMsg==str(2):
-              self.message.send_keys(option)
-              self.SendMensage.click()
-        elif ReceiverMsg==str(3):
-             self.message.send_keys()
-             self.SendMensage.click()
-        elif ReceiverMsg==str(4):
-             self.message.send_keys(debit)
-             self.SendMensage.click()
-             button_clip.click()
-             contact=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/span/div[1]/div/ul/li[5]/button/span')
-             contact.click()
-             FindContat=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/span[2]/div[1]/span/div[1]/div/div/div/div/div/div[1]/div/label/div/div[2]')
-             FindContat.send_keys("Comprovantes")
-             Checklist=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/span[2]/div[1]/span/div[1]/div/div/div/div/div/div[2]/div/div/div/div[1]/div/div[2]/div')
-             Checklist.click()
+             time.sleep(10)
+             if ReceiverMsg2!=str(i):
+                for v in self.DataBase.keys():
+                    if ReceiverMsg2 in self.DataBase[v]["TypeTruck"]:
+                        self.message.send_keys(str(self.DataBase[v]).strip())
+                        time.sleep(10)
+                        self.message.send_keys("Deseja de ir?\n Para Sim digite [S]\n Para Não digite[N]\n\n")
+                        self.SendMensage.click()
+                        time.sleep(10)
+                        if ReceiverMsg2=="S":
+                            self.message.send_keys("Ok\n""Um atendente vai entrar em contato contigo")
+                            self.SendMensage.click()
+                            i+=1
+                        elif ReceiverMsg2=="N":
+                            self.message.send_keys(SingleAswer.strip())
+                            self.SendMensage.click()
+                            time.sleep(10)
+                        else:
+                            self.message.send_keys("Digite uma opção valida")
+                            self.SendMensage.click()
+                            i+=1
         i=+1
 
 

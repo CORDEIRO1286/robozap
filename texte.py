@@ -1,3 +1,5 @@
-BodyType
+dicionario={}
+
+dicionario["texte"]={"origin":"text"}
 
 

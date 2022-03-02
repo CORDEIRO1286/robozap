@@ -1,0 +1,6 @@
+contact=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/span/div[1]/div/ul/li[5]/button/span')
+             contact.click()
+             FindContat=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/span[2]/div[1]/span/div[1]/div/div/div/div/div/div[1]/div/label/div/div[2]')
+             FindContat.send_keys("Comprovantes")
+             Checklist=self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/span[2]/div[1]/span/div[1]/div/div/div/div/div/div[2]/div/div/div/div[1]/div/div[2]/div')
+             Checklist.click()
